@@ -4,7 +4,12 @@ require(`dotenv`).config({
 
 module.exports = {
   siteMetadata: {
-    siteTitleAlt: `Minimal Blog - Gatsby Theme`,
+    // Used for the title template on pages other than the index site
+    siteTitle: `A Cloudy Journey`,
+    // Default title of the page
+    siteTitleAlt: `A Cloudy Journey`,
+    // Can be used for e.g. JSONLD
+    siteHeadline: `My Journey Learning the Cloud`,    
   },
   plugins: [
     {
@@ -24,11 +29,11 @@ module.exports = {
         externalLinks: [
           {
             name: `Twitter`,
-            url: `https://twitter.com/lekoarts_de`,
+            url: `https://twitter.com/ChrisSammarco`,
           },
           {
-            name: `Instagram`,
-            url: `https://www.instagram.com/lekoarts.de/`,
+            name: `Github`,
+            url: `https://github.com/casammar`,
           },
         ],
       },
