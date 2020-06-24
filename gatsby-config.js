@@ -16,6 +16,7 @@ module.exports = {
       resolve: `@lekoarts/gatsby-theme-minimal-blog`,
       // See the theme's README for all available options
       options: {
+        formatString: `MMMM DD, YYYY`,
         navigation: [
           {
             title: `Blog`,
@@ -28,12 +29,12 @@ module.exports = {
         ],
         externalLinks: [
           {
-            name: `Twitter`,
-            url: `https://twitter.com/ChrisSammarco`,
-          },
-          {
             name: `Github`,
             url: `https://github.com/casammar`,
+          },
+          {
+            name: `AWS Docs`,
+            url: `https://docs.aws.amazon.com`,
           },
         ],
       },
