@@ -1,0 +1,30 @@
+---
+title: EC2 Overview
+date: 2020-07-13
+slug: "/ec2-overview"
+description: An overview of the AWS service EC2
+tags:
+  - EC2
+---
+
+### EC2 - Elastic Compute Cloud
+- resizable compute capicty in the cloud
+- quicky scale compute capacity up and down as computing requirements change
+
+### Pricing Tiers
+1. **On-Demand** - pay fixed rate by the hour
+    * no long term commitment
+2. **Reserved** - contract with AWS for 1yr or 3yr term
+    1. Standard Reserved
+    2. Convertible Reserved - can convert between different EC2 instance type familys
+    3. Scheduled Reserved - available to launch within certain time windows (schools)
+3. **Spot** - price changes with capacity, you set your bid price
+    * If you terminate instance you are charged for full hour
+    * If Amazon terminates instance you are not charged for full hour
+4. **Dedicated Hosts** - dedicated EC2 server
+    * good for server-bound software licenses (oracle)
+
+### Launching Instances
+- Termination protection is **turned off** by default
+- On EBS-backed instance the default action is for the root EBS volume to be deleted when the instance is terminated
+- EBS root volumes **can now be encrytped** when launching instances
