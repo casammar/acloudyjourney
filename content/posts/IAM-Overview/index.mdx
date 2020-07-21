@@ -4,8 +4,25 @@ date: 2020-06-13
 slug: "/iam-overview"
 description: An overview of the AWS service IAM
 tags:
-  - AWS
   - IAM
+  - ACCESS
 ---
 
-Thestral dirigible plums
+## IAM Service
+**IAM allows you to control who is authenticated (signed in) and authorized (has permissions) to use resources.**
+
+### Features
+- Centralized control of your AWS account
+- Shared access to your AWS account
+- Granular permissions
+- Identity Federation (active directory, FB, linkedin, etc)
+- Multifactor Authentication
+- Integrates with many different AWS services
+- Supports PCI DSS Compliance
+- Use access key ID and secret access key to make programatic requests to AWS
+
+### Terminology
+1. Users - end users such as people or employees of organizations
+2. Groups - collection of users. Each user in the group will inherit the permissions of the group
+3. Policis - JSON formatted documents that give permissions as to what a user/group/role is able to do
+4. Roles - You can creat roles then assign them to AWS Resources
