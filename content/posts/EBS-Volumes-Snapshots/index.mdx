@@ -1,0 +1,37 @@
+---
+title: EBS Volumes and Snapshots
+date: 2020-07-26
+slug: "/ebs-volumes-snapshots"
+description: An overview of EBS Volumes and Snapshots
+tags:
+  - EC2
+  - EBS
+  - Snapshots
+---
+
+### EBS Volumes Overview
+- EBS = virtual hard disk drive in the cloud
+- Snapshots exist on S3
+- Snapshots are incremental, only changes data is stored to S3
+- Volumes will **ALWAYS** be in the same region as the EC@ instance
+- You can change the volume type and/or size **"on the fly"** without shutting down or terminating your volume
+- If you terminate EC2 instance by default root volume is terminated, additional volumes will persist
+
+### How to move EBS to another availability zone??
+1. Take snapshot of EBS Volumes
+2. Turn snapshot into AMI
+3. Luanch instance from AMI, choose which availability zone (subnet) to deploy in
+
+### How to move EBS to another region??
+1. Take snapshot of EBS Volumes
+2. Turn snapshot into AMI
+3. Click 'Actions' > 'Copy AMI'
+4. Select Region
+
+### Instance Store Volumes
+- Instance Store Volumes = Ephemeral Storage
+- Instance Store Volumes can't be stopped, if host fails you **WILL** lose data
+- EBS back instances can be stopped, will **NOT** lose data if stopped
+- Can reboot both, will not lose data
+- By default, both **ROOT** volumes will be deleted on termination.
+- With EBS volumes, can set instance termination behavior to not delete 
