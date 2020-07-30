@@ -7,13 +7,16 @@ tags:
   - EC2
   - EBS
   - Snapshots
+  - Storage
 ---
+
+![EBS Types Comparison](https://acloudyjourney.s3-us-west-1.amazonaws.com/EBS+Types+Comparison.png "EBS Types Comparison")
 
 ### EBS Volumes Overview
 - EBS = virtual hard disk drive in the cloud
 - Snapshots exist on S3
 - Snapshots are incremental, only changes data is stored to S3
-- Volumes will **ALWAYS** be in the same region as the EC@ instance
+- Volumes will **ALWAYS** be in the same region as the EC2 instance
 - You can change the volume type and/or size **"on the fly"** without shutting down or terminating your volume
 - If you terminate EC2 instance by default root volume is terminated, additional volumes will persist
 
@@ -35,3 +38,16 @@ tags:
 - Can reboot both, will not lose data
 - By default, both **ROOT** volumes will be deleted on termination.
 - With EBS volumes, can set instance termination behavior to not delete 
+
+### EBS Volume Encryption
+- snapshots of encrypted volumes are encrypted automatically
+- volumes restored from encrypted snapshots are encrypted automatically
+- you can share snapshots but only if they are encrypted
+- snapshots can be shared with other AWS accounts or made public
+- It is now possible to encrypt root volume from launch wizard
+
+### How to create Encrypted Volume from already created Unecrypted Volume?
+1. Create snapshot of unencrypted root device volume
+2. create copy of the snapshot and select encrypt option
+3. create AMI from encrypted snapshot
+4. use that AMI to launch new encrypted instance

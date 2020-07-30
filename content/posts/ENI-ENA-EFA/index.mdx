@@ -1,0 +1,33 @@
+---
+title: ENI vs. ENA vs. EFA
+date: 2020-07-30
+slug: "/eni-ena-efa"
+description: Comparing different types of network adapters for EC2 instances
+tags:
+  - EC2
+  - Networking
+---
+
+1. **Elastic Network Interface (ENI)** - essentially just a virtual networking card. Comes default with EC2 instances.
+    - Use Cases:
+    - management network
+    - seperate network and security appliances in your VPC
+    - dual-home instances with workloads/roles on different subnets
+    - create low-budget, high availability solution
+2. **Enhanced Networking** - uses single root I/O virtualization (SR-IOV) to provide high networking capabilities on supported instance types.
+    - higher bandwidth, higher packets per second, lower inter-instance latencies. 
+    - no additional charge, but must be on **supported instance types**
+    - **use where you want good network performance**
+    - **Elastic Network Adapter (ENA)** - supports speeds up to **100Gbps**
+    - **Virtual Function (VF)** - Intel 82599 supports speeds up to **10Gbps**
+    - **If given option choose ENA over VF on exam**
+3. **Elastic Fabric Adapter (EFA)** - network device that you can attach to EC2 instance to accelerate **High Performance Computing (HPC)** and **machine learning applications** 
+    - EFA provides lower latency and higher throughput than TCP transport used in tradtional HPC systems
+    - uses OS-bypass to bypass OS kernal and communicate directly with EFA device
+    - **used mainly for machine learning applications**
+    - **Not supported on windows, only linux**
+
+---
+
+### Exam Tips
+![ENI vs. ENA vs. EFA](https://acloudyjourney.s3-us-west-1.amazonaws.com/ENI+ENA+EFA.png "ENI vs. ENA vs. EFA")
