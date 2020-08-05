@@ -27,15 +27,11 @@ module.exports = {
             slug: `/about`,
           },
           {
-            title: `Agency Work`,
-            slug: `/agency-work`,
+            title: `Links`,
+            slug: `/links`,
           },
         ],
         externalLinks: [
-          {
-            name: `Github`,
-            url: `https://github.com/casammar`,
-          },
           {
             name: `AWS Docs`,
             url: `https://docs.aws.amazon.com`,
