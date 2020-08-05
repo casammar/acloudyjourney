@@ -58,7 +58,7 @@ module.exports = {
         description: `Notes about the cloud`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#20ad00`,
+        theme_color: `#f4900c`,
         display: `standalone`,
         icons: [
           {
